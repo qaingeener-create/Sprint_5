@@ -59,4 +59,4 @@ def test_logout():
     # Проверка выхода из аккаунта
     WebDriverWait(driver, 10).until(EC.url_changes("https://stellarburgers.education-services.ru/"))
 
-    driver.quit()
+    driver.quit() /
