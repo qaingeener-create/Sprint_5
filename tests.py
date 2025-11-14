@@ -13,8 +13,7 @@ def generate_password():
 
 def test_successful_registration():
     driver = webdriver.Chrome()
-    driver.get("https://stellarburgers.education-services.ru/account/profile")  # Замените на URL вашей формы регистрации
-
+    driver.get("https://stellarburgers.education-services.ru/account/profile")  
     # Ввод данных
     name_input = driver.find_element(*NAME_INPUT)
     name_input.send_keys("Test Name")
@@ -34,8 +33,7 @@ def test_successful_registration():
 
 def test_login():
     driver = webdriver.Chrome()
-    driver.get("https://stellarburgers.education-services.ru/login")  # Замените на URL вашей формы входа
-
+    driver.get("https://stellarburgers.education-services.ru/login")  
     # Ввод данных
     login_email_input = driver.find_element(*LOGIN_EMAIL_INPUT)
     login_email_input.send_keys(generate_email())
@@ -53,7 +51,7 @@ def test_login():
 
 def test_logout():
     driver = webdriver.Chrome()
-    driver.get("https://stellarburgers.education-services.ru/")  # Замените на URL вашего личного кабинета
+    driver.get("https://stellarburgers.education-services.ru/") 
 
     logout_button = WebDriverWait(driver, 10).until(EC.element_to_be_clickable(*LOGOUT_BUTTON))
     logout_button.click()
